@@ -1,0 +1,53 @@
+<div class="container my-5">
+    <h1 class="mb-3">Add New Employee</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <form #form = "ngForm" (ngSubmit)= "addEmployee()">
+                
+               <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" [(ngModel)]= "addEmployeeRequest.name"
+                  name="name" formControlName = 'name' >
+                                 
+                </div>
+
+                             <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" 
+                    name="email" formControlName = 'email' [ngModel]= "addEmployeeRequest.email" >
+                                     
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="number" class="form-control" id="phone" 
+                    name="phone" formControlName = 'phone' [ngModel]= "addEmployeeRequest.phone">
+                                     
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="salary" class="form-label">Salary</label>
+                    <input type="number" class="form-control" id="salary"
+                    name="salary" formControlName = 'salary'[ngModel]= "addEmployeeRequest.salary">
+                                     
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="department" class="form-label">Depatment</label>
+                    <input type="text" class="form-control" id="department"
+                    name="department" formControlName = 'department'[ngModel]= "addEmployeeRequest.department" >
+                                     
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="img" class = "form-label">Images</label>
+                    <input type="image" class="form-control" id="img" height="44px"
+                    name="img" formControlName = 'img' [ngModel]= "addEmployeeRequest.img">
+                  </div>
+
+                <button type="submit" class="btn btn-primary" >Save</button>
+              </form>
+        </div>
+    </div>
+    
+</div>

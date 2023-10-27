@@ -1,0 +1,36 @@
+<div class="container my-5">
+
+    <h1 mb-3>Employees</h1>
+
+    <table class="table" *ngIf= "Employees && Employees.length > 0 ">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Phone</td>
+                <td>Salary</td>
+                <td>Department</td>
+                <td>Images</td>
+            </tr>
+        </thead>
+<tbody>
+    <tr *ngFor ="let Employee of Employees " >
+        <td>{{ Employee.id}}</td>
+                <td>{{ Employee.name}}</td>
+                <td>{{ Employee.email}}</td>
+                <td>{{ Employee.phone}}</td>
+                <td>{{ Employee.salary}}</td>
+                <td>{{ Employee.department}}</td>
+        
+                <td>
+                    <img style="height: 80px; width: 80px;" [src]= 'imageBaseUrl+Employee.img'>
+                </td>
+    </tr>
+</tbody>
+    </table>
+    <p *ngIf= "!Employees">No Employees Found..</p>
+
+
+
+</div>
